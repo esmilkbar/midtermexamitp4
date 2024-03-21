@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffdd0;
+}
+
+.navbar {
+  background-color: #181f20;
+  color: #fffdd0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  margin-top: 7%;
+}
+
+.logo h1 {
+  margin: 0;
+  font-family: "Outfit";
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.logo {
+  margin-left: 5%;
+}
+.menu ul li {
+  margin-right: 60px;
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Outfit";
+}
+
+.menu ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+}
+
+.images img {
+  margin: 0 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Outfit";
+}
+
+.pars {
+  font-family: "Outfit";
+  font-size: 20px;
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.footer {
+  font-family: "Outfit";
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  margin-top: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 50px;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 1001;
+  }
+
+  .navbar .menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar .menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar .menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar .menu-toggle.active span {
+    background-color: white;
+  }
+
+  .navbar .menu-toggle.active {
+    background-color: transparent;
+  }
+
+  .navbar .menu-toggle.active:hover span {
+    background-color: white;
+  }
+
+  .navbar .menu-toggle:hover span {
+    background-color: #181f20;
+  }
+
+  .menu ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .menu-toggle.active + ul {
+    display: flex;
+    padding: 20px 0;
+  }
+
+  .menu ul li {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .container{
+    margin-top: 15%;
+  }
+  .images img {
+    width: 90%;
+  }
+
+  .pars {
+    margin: 0 5%;
+  }
+}
